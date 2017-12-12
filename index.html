@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>accessibility-slides</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/my-simple.css" id="theme">
+    <link rel="stylesheet" href="css/costum.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Welcome Slide -->
+        <section>
+          <h1>Web Accessibility</h1>
+          <img src="https://png.icons8.com/web-accessibility/color/1600" class="image-m clean-image" />
+        </section>
+        <!-- Welcome Slide -->
+
+        <!-- Intro -->
+        <section>
+          <section>
+            <h3>
+              What is web accessibility?
+              <br />
+              And why should we care about it?
+            </h3>
+          </section>
+
+          <section>
+            <p>
+              Accessibility means that people with disabilities can <b class="fragment highlight-blue">perceive</b>, 
+              <b class="fragment highlight-blue">understand</b>, <b class="fragment highlight-blue">navigate</b>, and <b class="fragment highlight-blue">interact</b> 
+              with the web, and that they can <b class="fragment highlight-blue important">contribute</b> to the web.
+            </p>
+            <small>From The WAI-ARIA Spec</small>
+          </section>
+
+          <section>
+            <h2>Few Basic Facts</h2>
+          </section>
+
+          <section>
+            <h4>Worldwide, 1 in 5 people has some kind of disability</h4>
+            <img src="https://www.rickhansen.com/portals/0/Images/OurWork/RHF-422-Our_Work_DisabilityStat.svg" class="clean-image image-m" />
+          </section>
+
+          <section>
+            <h5>We have on <img src="assets/images/logo_color.png" class="clean-image" style="width: 15%; vertical-align: bottom;" /> ~20M pageviews per day</h5>
+            <p class="fragment fade-up">
+              It means that every day there are ~4M people that are not able to consume the full PB experiance.
+            </p>
+            <p class="fragment fade-up">
+              And that means, a higher bounce rate, less time on page etc.
+            </p>
+            <p class="fragment fade-up">
+              And that means less $$$
+            </p>
+          </section>
+
+          <section>
+            <h4>The web is accessible by default.</h4>
+            <p class="fragment fade-in">We as web developers, designers, and product managers are damaging its accessibility.</p>
+          </section>
+        </section>
+        <!-- Intro -->
+
+        <!-- History and background -->
+        <section>
+
+          <section>
+              <h2>History &amp; Background</h2>
+          </section>
+
+          <section>
+              <ul class="timeline-list">
+                  <li class="timeline-title">
+                      April 30, 1993
+                  </li>
+                  <li>
+                      The CERN directorate released the source code of WorldWideWeb into the public domain.
+                  </li>
+                <li class="timeline-title">
+                    January 1995
+                </li>
+                <li>
+                    The first web accessibility guideline was compiled by Gregg Vanderheiden.
+                </li>
+                <li class="timeline-title">
+                    1995 => 1998
+                </li>
+                <li>
+                    Over the next few years, more than 38 different Web access guidelines were compiled by various authors and organizations.
+                </li>
+                <li class="timeline-title">
+                    1997
+                </li>
+                <li>
+                    The W3C launched the <i>Web Accessibility Initiative (WAI)</i> with endorsement by The White House and W3C members.
+                </li>
+                <li class="timeline-title">
+                    1998
+                </li>
+                <li>
+                    These were brought together in the <i>"Unified Web Site Accessibility Guidelines"</i> compiled at the University of Wisconsin-Madison. 
+                    Version 8 of the it, served as the starting point for the W3C's WCAG 1.0
+                </li>
+              </ul>
+              <aside class="notes">
+                I'm your Notes :)
+              </aside>
+          </section>
+
+          <section>
+              <ul class="timeline-list">
+                  <li class="timeline-title">
+                      5 May 1999
+                  </li>
+                  <li>
+                      The WCAG 1.0 was published and became a W3C recommendation. It consist of 14 guidelines—each of which describes a general principle of accessible design.
+                  </li>
+                  <li class="timeline-title">
+                      February 2008
+                  </li>
+                  <li>
+                      The WCAG Samurai, a group of developers independent of the W3C, and led by Joe Clark, published corrections for, and extensions to, the WCAG 1.0
+                  </li>
+                  <li class="timeline-title">
+                      11 December 2008
+                  </li>
+                  <li>
+                      WCAG 2.0 was published as a W3C Recommendation. 
+                      It consists of twelve guidelines organized under four principles (websites must be perceivable, operable, understandable, and robust). 
+                      Each guideline has testable success criteria (61 in all).
+                  </li>
+                  <li class="timeline-title">
+                      20 March 2014
+                  </li>
+                  <li>
+                      WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) is a technical specification which became a W3C Recommended Web Standard.
+                  </li>
+          </section>
+
+          <section>
+            <h3>2018</h3>
+            <div class="fragment fade-up">
+                <img src="assets/images/logo_color.png" class="clean-image" />
+                <p>Is becoming accesible</p>
+            </div>
+          </section>
+
+        </section>
+        <!-- History and background -->
+
+        <!-- Understand disability types -->
+        <section>
+          <h4>Categories of disability types:</h4>
+          <div class="list-mime">
+            <div class="list-row fragment fade-right">
+              <div class="list-image">
+                  <img src="assets/images/eye.png" class="list-icon clean-image" />
+              </div>
+              <div class="list-category">Visual: </div>
+              <div class="list-text">Blindness, low vision, color-blindness</div>
+            </div>
+            <div class="list-row fragment fade-right">
+                <div class="list-image">
+                  <img src="assets/images/ear.png" class="list-icon clean-image" />
+                </div>
+                <div class="list-category">Hearing: </div>
+                <div class="list-text">Deafness and hard-of-hearing</div>
+            </div>
+              <div class="list-row fragment fade-right">
+                <div class="list-image">
+                  <img src="assets/images/hand.png" class="list-icon clean-image" />
+                </div>
+                <div class="list-category">Motor: </div>
+                <div class="list-text">Inability to use a mouse, slow response time, limited fine motor control</div>
+              </div>
+                <div class="list-row fragment fade-right">
+                    <div class="list-image">
+                      <img src="assets/images/brain.png" class="list-icon clean-image" />
+                    </div>
+                    <div class="list-category">Cognitive: </div>
+                    <div class="list-text">Learning disabilities, distractibility, inability to remember or focus on large amounts of information</div>
+                </div>
+          </div>
+        </section>
+        <!-- Understand disability types -->
+
+        <!-- mid-sum -->
+        <section>
+          <section>
+            <h2>Main Principles For Accessible Web</h2>
+          </section>
+
+          <section>
+              <h3>Perceivable</h3>
+              <ul class="list-row fragment fade-up">
+                  <li>1.1: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.</li>
+                  <li>1.2: Time-based media: Provide alternatives for time-based media.</li>
+                  <li>1.3: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</li>
+                  <li>1.4: Make it easier for users to see and hear content including separating foreground from background.</li>
+              </ul>
+            </section>
+    
+            <section>
+                <h3>Operable</h3>
+                <ul class="list-row fragment fade-up">
+                  <li>2.1: Make all functionality available from a keyboard.</li>
+                  <li>2.2: Provide users enough time to read and use content.</li>
+                  <li>2.3: Do not design content in a way that is known to cause seizures.</li>
+                  <li>2.4: Provide ways to help users navigate, find content, and determine where they are.</li>
+                </ul>
+            </section>
+    
+            <section>
+                <h3>Understandable</h3>
+                <ul class="list-row fragment fade-up">
+                    <li>3.1: Make text content readable and understandable.</li>
+                    <li>3.2: Make web pages appear and operate in predictable ways.</li>
+                    <li>3.3: Help users avoid and correct mistakes.</li>
+                </ul>
+            </section>
+    
+            <section>
+                <h3>Robust</h3>
+                <ul class="list-row fragment fade-up">
+                  <li>4.1.: Maximize compatibility with current and future user agents, including assistive technologies.</li>
+                </ul>
+            </section>
+
+            <section>
+              <a href="https://webaim.org/standards/wcag/checklist" target="_blank">WebAIM's WCAG 2.0 Checklist</a>
+            </section>
+        </section>
+        <!-- mid-sum -->
+        
+        <!-- Different Ways To Browse The Web -->
+        <section>
+          <section>
+            <h2>Different Ways To Browse The Web</h2>
+          </section>
+
+          <section>
+            <h3>Keyboard only users</h3>
+            <img src="http://www.ethicalmusic.com/images/Braille-Picture.png" class="clean-image" />
+          </section>
+
+          <section>
+            <h3>Head wands / Mouth sticks</h3>
+            <img src="https://www.rehabmart.com/include-mt/img-resize.asp?path=/imagesfromsp/6003l.jpg" class="clean-image" />
+          </section>
+
+          <section>
+            <h3>Screen readers</h3>
+            <img src="https://blogs.sap.com/wp-content/uploads/2013/07/9_244699.png" class="clean-image" />
+          </section>
+
+          <section>
+            <h3>Single switch</h3>
+            <img src="http://www.orin.com/access/photos/swifty_orby_500.png" class="clean-image" />
+          </section>
+
+        </section>
+        <!-- Different Ways To Browse The Web -->
+
+        <section>
+          <section>
+              <h2>Core concepts</h2>
+          </section>
+
+          <section>
+            <h4>Semantic DOM</h4>
+            <p>
+              Use the correct DOM elements where nedded (for example do not use <code>&lt;a&gt;</code> as an alternative to <code>&lt;button&gt;</code>).
+              Use semantic DOM architecture devisions (e.g. <code>&lt;nav&gt;, &lt;section&gt;, &lt;article&gt;</code> etc.)
+            </p>
+            <p>
+                By using semantic tags and styles instead of using presentational tags, which are only visual, the meaning is not carried through by a technology that only reads the code.
+            </p>
+          </section>
+
+          <section>
+            <h4>Tabbable Content</h4>
+            <p>
+              This is the most common way to navigate in a web page with assistive technologies (and regular keyboards).
+              For some people it's the only way to navigate in a web page.
+            </p>
+            <p>
+              Use <code>tabindex</code>, block skip links and, tab trappings when necessary (we will talk about how on a saparate talk).
+            </p>
+          </section>
+
+          <section>
+            <h4>Visual Focus</h4>
+            <p>
+              Often we tend to hide this feature. It helps keyboard users (but not only) to orientate in the page and to understand which elements are interactive. 
+            </p>
+          </section>
+
+          <section>
+            <h4>Color Contrast</h4>
+          </section>
+
+          <section>
+            <h4>Alternate Text</h4>
+          </section>
+
+          <section>
+            <h4>ARIA Lables</h4>
+          </section>
+        </section>
+
+        <section>
+
+          <h4 style="text-align: left">
+            <img src="assets/images/toolbox.png" class="list-icon clean-image" style="vertical-align: bottom;" /> 
+            Toolbox
+          </h4>
+          <ul>
+            <li>
+              <a href="https://webaim.org/standards/wcag/checklist" target="_blank">WebAim Checklist</a>
+            </li>
+            <li>
+              <a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en" target="_blank">ChromeVox (Screen reader Chrome extension)</a>
+            </li>
+            <li>
+              <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en" target="_blank">Accessibility Developer Tools (Extension to Chrome devtools)</a>
+            </li>
+            <li>
+              <a href="chrome://flags/" target="_blank">chrome://flags/ => developer Tools experiments</a>
+            </li>
+            <li>
+              <a href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl" target="_blank">noCoffe (Chrome extension to emulate low vision / color-blindness)</a>
+            </li>
+            <li>
+              <a href="https://accessibility.oit.ncsu.edu/tools/color-contrast/" target="_blank">Color Contrast Tester</a>
+            </li>
+            <li>
+              <a href="https://tenon.io/" target="_blank">Tenon - Accessibility Testing</a>
+            </li>
+          </ul>
+        </section>
+
+        <section>Future action items</section>
+
+        <!-- Resources -->
+        <section>
+
+          <section>
+            <h3>Resources</h3>
+          </section>
+
+          <section id="resources-slide">
+            <h5>History &amp; Background</h5>
+            <br />
+            <ul>
+              <li><a href="https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines" target="_blank">Web Content Accessibility Guidelines - Wikipedia</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Web_Accessibility_Initiative" target="_blank">Web Accessibility Initiative (WAI) - Wikipedia</a></li>
+            </ul>
+            <h5>Understand accessibility</h5>
+            <br />
+            <ul>
+              <li><a href="https://webaim.org/intro/" target="_blank">Introduction to Web Accessibility</a></li>
+              <li><a href="https://a11yproject.com/checklist" target="_blank">Web Accessibility Checklist. A beginner's guide to web accessibility By The A11Y Project</a></li>
+              <li><a href="https://medium.com/@Cheffheid/accessibility-of-semantics-how-writing-semantic-html-can-help-accessibility-17c6f0eb7140" target="_blank">Accessibility of Semantics: How Writing Semantic HTML Can Help Accessibility</a></li>
+            </ul>
+
+            <h5>Hands on</h5>
+            <br />
+            <ul>
+              <li><a href="https://w3c.github.io/using-aria/" target="_blank">Using ARIA</a></li>
+              <li><a href="https://www.w3.org/WAI/gettingstarted/tips/developing" target="_blank">Tips on Developing for Web Accessibility</a></li>
+              <li><a href="https://github.com/filipelinhares/WAI-ARIA-cheatsheet" target="_blank">WAI-ARIA-cheatsheet</a></li>
+              <li><a href="https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9" target="_blank">Writing JavaScript with accessibility in mind</a></li>
+            </ul>
+            <br />
+            <a href="https://a11yproject.com/resources" style="display: block; margin-top: 2.5rem;">One Link Tons Of Resources</a>
+          </section>
+        </section>
+        <!-- Resources -->
+
+        <!-- Wrap -->
+        <section>
+          <section>
+            <h2>
+              <b>!?</b>
+            </h2>
+          </section>
+          <section>
+              <h3>Thanks!</h3>
+            </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+      var role = getParameterByName('role');
+      role = role === 'master' ? role : 'client';
+
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+        multiplex: {
+          secret: '15124830151577138573',
+          id: '54dc81049a8a7c46',
+          url: 'https://reveal.302.at'
+        },
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'assets/lib/socket.io.min.js', async: true },
+          { src: 'plugin/multiplex/' + role + '.js', async: true },
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
