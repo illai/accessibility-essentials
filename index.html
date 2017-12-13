@@ -27,7 +27,7 @@
       <div class="slides">
         <!-- Welcome Slide -->
         <section>
-          <h1>Web Accessibility</h1>
+          <h2>Accessibility Essentials</h2>
           <img src="https://png.icons8.com/web-accessibility/color/1600" class="image-m clean-image" />
         </section>
         <!-- Welcome Slide -->
@@ -61,9 +61,9 @@
           </section>
 
           <section>
-            <h5>We have on <img src="assets/images/logo_color.png" class="clean-image" style="width: 15%; vertical-align: bottom;" /> ~20M pageviews per day</h5>
+            <h5>We have on <img src="assets/images/logo_color.png" class="clean-image" style="width: 15%; vertical-align: bottom;" /> ~20M page views per day</h5>
             <p class="fragment fade-up">
-              It means that every day there are ~4M people that are not able to consume the full PB experiance.
+              It means that every day there are ~4M people that are not able to consume the full PB experience.
             </p>
             <p class="fragment fade-up">
               And that means, a higher bounce rate, less time on page etc.
@@ -280,6 +280,7 @@
         </section>
         <!-- Different Ways To Browse The Web -->
 
+        <!-- Core concepts -->
         <section>
           <section>
               <h2>Core concepts</h2>
@@ -310,23 +311,52 @@
           <section>
             <h4>Visual Focus</h4>
             <p>
-              Often we tend to hide this feature. It helps keyboard users (but not only) to orientate in the page and to understand which elements are interactive. 
+              Often we tend to hide this feature. It helps keyboard users (but not only), to orientate in the page, 
+              and to understand which elements are interactive. 
+            </p>
+            <p>
+              We should keep in mind that this feature (and a few more), was implemented with a good reason, 
+              and not to be hasty when deciding to override it without an alternative.
             </p>
           </section>
 
           <section>
             <h4>Color Contrast</h4>
+            <p>
+              When someone has low visual acuity, certain color palettes on websites may make it difficult for that person to fully see and understand the website content.
+            </p>
+            <p>
+              Low-quality displays, displays with low backlight, and low-contrast display settings can all reduce the default amount of contrast, making already-low-contrast designs even lower.
+            </p>
+            <p>
+                level AA requires a contrast ratio of 4.5:1 for normal text and 3:1 for large text.
+            </p>
           </section>
 
           <section>
             <h4>Alternate Text</h4>
+            <p>
+              Alternative text provides a textual alternative to non-text content in web pages.
+            </p>
+            <p>
+              Adding alternative text for images is the first principle of web accessibility. It is also one of the most difficult to properly implement. 
+              The web is replete with images that have missing, incorrect, or poor alternative text.
+            </p>
           </section>
 
           <section>
-            <h4>ARIA Lables</h4>
+            <h4>ARIA attributes</h4>
+            <p>
+              WAI-ARIA if you want to be formal, is a set of attributes that you can add to HTML elements.
+            </p>
+            <p>
+              These attributes communicate role, state and property semantics to assistive technologies via the accessibility APIs implemented in browsers.
+            </p>
           </section>
         </section>
+        <!-- Core concepts -->
 
+        <!-- Toolbox -->
         <section>
 
           <h4 style="text-align: left">
@@ -350,15 +380,43 @@
               <a href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl" target="_blank">noCoffe (Chrome extension to emulate low vision / color-blindness)</a>
             </li>
             <li>
-              <a href="https://accessibility.oit.ncsu.edu/tools/color-contrast/" target="_blank">Color Contrast Tester</a>
+              <a href="https://accessibility.oit.ncsu.edu/tools/color-contrast/" target="_blank">Color Contrast Tester (website)</a>
+            </li>
+            <li>
+              <a href="https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll?hl=en>">Color Contrast Analyzer (Chrome extension)</a>
             </li>
             <li>
               <a href="https://tenon.io/" target="_blank">Tenon - Accessibility Testing</a>
             </li>
           </ul>
         </section>
+        <!-- Toolbox -->
 
-        <section>Future action items</section>
+        <!-- Whats now? -->
+        <section>
+          <section>
+            <h4>
+              OK, so whats now...!?
+            </h4>
+          </section>
+
+          <section style="text-align: left;">
+            <p>We started working with a consultant company called <a href="https://a-2-z.co.il/" target="_blank">A-2-Z</a>.</p>
+            <p class="fragment fade-up">
+              They will analize our pages and particles and will give us reports with action items.
+            </p>
+            <p class="fragment fade-up">
+              On phase one we are not going to deal with: creation flow, signin/signup flows, Impact, videos or any backoffice pages
+            </p>
+            <p class="fragment fade-up">
+              We will extract from A-2-Z's reports coding for accessibility guidlines, and similsr ones for the design and product teams on their domains.
+            </p>
+            <p class="fragment fade-up">
+              Additional talks that will focus on specific concepts and best practices.
+            </p>
+          </section>
+        </section>
+        <!-- Whats now? -->
 
         <!-- Resources -->
         <section>
@@ -407,6 +465,8 @@
               <h3>Thanks!</h3>
             </section>
         </section>
+        <!-- Wrap -->
+
       </div>
     </div>
 
