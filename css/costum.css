@@ -101,14 +101,15 @@
     text-align: left;
 }
 
-.reveal section#resources-slide li{
-    font-size: 2.5rem;
+.reveal section#resources-slide a{
+    font-size: 2rem;
 }
 
-.reveal section#resources-slide h5{
+.reveal section#resources-slide h6{
     border-bottom: 3px solid #a70000;
     margin: 2rem 0 2rem;
     display: inline-block;
+    font-size: 2rem;
 }
 
 .reveal a {
